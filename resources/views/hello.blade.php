@@ -17,8 +17,10 @@
         @endif
     </head>
     <body class="h-full">
-        <x-navbar2></x-navbar2>
-        <x-hero></x-hero>
+       
+        <?php echo($_POST['email'])?>
+        <?php echo($_POST['email'])?>
+
     </body>
 
 </html>
