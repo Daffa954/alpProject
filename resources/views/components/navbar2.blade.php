@@ -1,5 +1,5 @@
-<header class="bg-slate-200 mb-10 z-1000 relative" x-data="{ isOpen: false }">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8" aria-label="Global">
+<header class="bg-slate-200 mb-10 z-[1000] relative" x-data="{ isOpen: false }">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-7 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1 items-center">
             <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
@@ -19,18 +19,18 @@
                 </svg>
             </button>
         </div>
-        
+
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/form" class="text-sm/6 font-semibold text-gray-900">Log in <span
+            <a href={{ $route }} class="text-sm/6 font-semibold text-gray-900">Log in <span
                     aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div x-show="isOpen" class="lg:hidden" role="dialog" aria-modal="true">
+    <div x-show="isOpen" class="lg:hidden " role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
-            class="fixed  inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-400 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#f6f6f6] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
@@ -47,49 +47,7 @@
             </div>
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
-                    <div class="space-y-2 py-6" x-data = "{isOpen2: false}">
-                        <div class="-mx-3">
-                            <button type="button" @click="isOpen2 = !isOpen2"
-                                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                aria-controls="disclosure-1" aria-expanded="false">
-                                Product
-
-                                <svg :class="{ 'rotate-180': isOpen2, '': !isOpen2 }" class="size-5 flex-none"
-                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path fill-rule="evenodd"
-                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                            <div class="mt-2 space-y-2" id="disclosure-1" x-show="isOpen2"
-                            
-                            >
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Analytics</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Engagement</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Security</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Integrations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Automations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Watch
-                                    demo</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Contact
-                                    sales</a>
-                            </div>
-                        </div>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                    </div>
+                    
                     <div class="py-6">
                         <a href="#"
                             class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log

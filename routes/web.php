@@ -12,7 +12,9 @@ Route::get('/form', function () {
 Route::get('/pendaftaran', function () {
     return view('student-form');
 });
-
+Route::get('/login-student', function () {
+    return view('student-login');
+});
 Route::post('/login', function (\Illuminate\Http\Request $request){
     return view('hello', ['data' => $request->all()]);
 })->name('login');
