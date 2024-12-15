@@ -5,16 +5,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/form', function () {
-    return view('login');
+
+Route::get('/login', function () {
+    $type = request('type', 'Vendor'); // Default to 'Vendor' if no type is provided
+    return view('login', compact('type'));
 });
 
-Route::get('/pendaftaran', function () {
-    return view('student-form');
+Route::get('/dashboard', function(){
+    return view('dashboard',[
+        "pageTitle" => "Dashboard"
+    ]);
 });
-Route::get('/login-student', function () {
-    return view('student-login');
+
+Route::get('/daftarekskul', function(){
+    return view('daftarekskul',[
+        "pageTitle" => "Daftar Ekskul"
+    ]);
 });
-Route::post('/login', function (\Illuminate\Http\Request $request){
-    return view('hello', ['data' => $request->all()]);
-})->name('login');
+
+Route::get('/absensisiswa', function(){
+    return view('absensisiswa',[
+        "pageTitle" => "Absensi Siswa"
+    ]);
+});
+
+Route::get('/editprofile', function(){
+    return view('editprofile',[
+        "pageTitle" => "Edit Profile"
+    ]);
+});
