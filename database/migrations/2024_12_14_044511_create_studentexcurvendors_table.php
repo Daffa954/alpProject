@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('studentexcurvendors', function (Blueprint $table) {
+        Schema::create('student_excur_vendors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId(column: 'excurvendor_id')->constrained(table: 'excurvendors', indexName: 'excurvendor_id');
+            $table->foreignId(column: 'excur_vendor_id')->constrained(table: 'excur_vendors', indexName: 'excurvendor_id');
             $table->foreignId(column: 'student_id')->constrained(table: 'students', indexName: 'student_id');
             $table->integer('score_mid');
             $table->integer('score_final');

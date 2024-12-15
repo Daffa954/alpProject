@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('meetings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId(column: 'excurvendor_id')->constrained(table: 'excurvendors', indexName: 'excurvendor_id_m');
+            $table->foreignId(column: 'excur_vendor_id')->constrained(table: 'excur_vendors', indexName: 'excur_vendor_id_m');
             $table->date("meeting_date");
             $table->string(column: 'topic');
             $table->string(column: 'teacher');

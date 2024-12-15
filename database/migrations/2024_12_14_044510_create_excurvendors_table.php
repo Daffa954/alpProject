@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('excurvendors', function (Blueprint $table) {
+        Schema::create('excur_vendors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('extracuricullar_id')->constrained(table: 'extracuricullars', indexName: 'extracuricullar_id');
             $table->foreignId('vendor_id')->constrained(table: 'vendors', indexName: 'vendor_id');
