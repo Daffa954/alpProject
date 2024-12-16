@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('score_final');
             $table->text('url_certificate');
             $table->text('note');
-
+            $table->integer('bill');
             $table->timestamps();
         });
     }

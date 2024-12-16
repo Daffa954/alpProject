@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('payment_date');
             $table->integer('amount');
             $table->text('transfer_url');
+            $table->text('status_payment');
             $table->timestamps();
         });
     }
