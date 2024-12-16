@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('excur_vendors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('extracuricullar_id')->constrained(table: 'extracuricullars', indexName: 'extracuricullar_id');
+            $table->foreignId('extracurricular_id')->constrained(table: 'extracurriculars', indexName: 'extracuricullar_id');
             $table->foreignId('vendor_id')->constrained(table: 'vendors', indexName: 'vendor_id');
             $table->integer('semester');
             $table->year('academic_year');

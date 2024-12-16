@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('extracurriculars', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('division');
-            $table->string('level');
-            $table->timestamps();
+        Schema::table('excur_vendors', function (Blueprint $table) {
+            //
+            $table->integer('fee');
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('extracuricullars');
+        Schema::table('excur_vendors', function (Blueprint $table) {
+            //
+        });
     }
 };
