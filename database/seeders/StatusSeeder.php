@@ -18,7 +18,7 @@ class StatusSeeder extends Seeder
             ['status_name' => 'hadir'],
             ['status_name' => 'terlambat'],
             ['status_name' => 'izin'],
-            ['status_name' => 'tidak dir'],
+            ['status_name' => 'tidak hadir'],
 
         ]);
     }

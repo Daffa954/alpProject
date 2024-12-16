@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExtracurricularController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,11 +18,7 @@ Route::get('/dashboard', function(){
     ]);
 });
 
-Route::get('/daftarekskul', function(){
-    return view('daftarekskul',[
-        "pageTitle" => "Daftar Ekskul"
-    ]);
-});
+Route::get('/daftarekskul', [ExtracurricularController::class, 'index']);
 
 Route::get('/absensisiswa', function(){
     return view('absensisiswa',[

@@ -19,26 +19,28 @@
             class="flex flex-wrap items-center justify-between bg-white w-full h-[60px] rounded-md px-4 xl:px-10 mb-4 border-s-[10px] shadow border-custom-blue">
             <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Id Ekskul</h1>
             <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Nama Ekskul</h1>
+            <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Divisinpm</h1>
             <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Level</h1>
-            <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Jumlah Murid</h1>
             <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">PIC</h1>
             <h1 class="text-black sm:text-sm text-[11px] w-1/6 text-center">Absensi Siswa</h1>
         </div>
-
-        <!-- Data Row -->
+        @foreach ($ekskulList as $ekskul)
+            <!-- Data Row -->
         <div
-            class="flex flex-wrap items-center justify-between bg-white w-full h-[80px] rounded-md px-4 xl:px-10 mb-[3px] border-s-[11px] shadow border-custom-blue">
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">#1</h1>
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">Basket</h1>
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">Nasional</h1>
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">50</h1>
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">Jonas</h1>
-            <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">
-                <a href="#"
-                    class="xl:border-[1px] xl:no-underline underline xl:border-custom-blue hover:text-blue-700 text-custom-blue xl:px-4 xl:py-2 rounded-xl md:hover:bg-custom-blue md:hover:text-white transition-all duration-300">Detil
-                    Absensi</a>
-            </h1>
-        </div>
+        class="flex flex-wrap items-center justify-between bg-white w-full h-[80px] rounded-md px-4 xl:px-10 mb-[3px] border-s-[11px] shadow border-custom-blue">
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">#{{ $ekskul['id`'] }}</h1>
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">{{ $ekskul['name'] }}</h1>
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">{{ $ekskul['divisi'] }}</h1>
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">{{ $ekskul['level'] }}</h1>
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">Jonas</h1>
+        <h1 class="text-[#726F6F] sm:text-sm text-[11px] w-1/6 text-center">
+            <a href="#"
+                class="xl:border-[1px] xl:no-underline underline xl:border-custom-blue hover:text-blue-700 text-custom-blue xl:px-4 xl:py-2 rounded-xl md:hover:bg-custom-blue md:hover:text-white transition-all duration-300">Detil
+                Absensi</a>
+        </h1>
+    </div>
+        @endforeach
+        
 
         {{-- <div class="flex flex-col justify-center items-center h-screen">
             <h1 class="text-gray-500 text-lg">Tidak ada ekskul</h1>
