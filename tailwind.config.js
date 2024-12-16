@@ -10,11 +10,20 @@ export default {
         './resources/**/*.vue',
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+        fontFamily: {
+            sans: ['Poppins','Figtree', ...defaultTheme.fontFamily.sans],
         },
+
+        fontSize:{
+            'huge': '50px'
+        },
+        colors:{
+            'custom-blue': '#211F60'
+        },
+        spacing: {
+            '128': '32rem',  // Custom size for width or height
+            '144': '36rem',  // Another custom size
+          },
     },
     plugins: [],
 };
